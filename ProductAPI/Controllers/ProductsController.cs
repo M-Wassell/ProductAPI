@@ -13,7 +13,7 @@ namespace ProductAPI.Controllers
     
     public class ProductsController : ControllerBase
     {
-        private IProductData _productData;
+        private readonly IProductData _productData;
 
         public ProductsController(IProductData productData)
         {
@@ -24,7 +24,7 @@ namespace ProductAPI.Controllers
         [Route("api/[controller]")]
         public IActionResult GetProducts()
         {
-            return Ok(_productData.GetProducts());
+            return Ok(_productData.GetProducts());// try this in the App to use the API
         }
 
 

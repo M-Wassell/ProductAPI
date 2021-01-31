@@ -8,7 +8,7 @@ namespace ProductAPI.ProductData
 {
     public class MockProductData : IProductData
     {
-        private List<Product> products = new List<Product>()
+        private readonly List<Product> products = new List<Product>()
         {
             new Product()
             {
